@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
     'use strict';
 
     function Carousel (options) {
@@ -70,4 +70,33 @@
     }
 
     new Carousel({ element: '.carousel-container' });
-})();
+    $('img[usemap]').rwdImageMaps();
+    $('img[usemap]').maphilight({
+    	fillColor: '44a9ff',
+    	strokeColor: '44a9ff'
+    });
+
+    document.querySelector('map').addEventListener('click', function(event) {
+    	event.preventDefault();
+    	if (event.target.classList.contains('front-office-area')) {
+    		document.querySelector('#gallery').classList.add('front-office-active');
+    		document.querySelector('#gallery').classList.remove('apartment-active');
+    	} else {
+    		document.querySelector('#gallery').classList.remove('front-office-active');
+    		document.querySelector('#gallery').classList.add('apartment-active');
+    	}
+
+    	$('a [data-lightbox="' + $(event.target).data('lightboxAlbum') + '"]').get(0).click();
+    });
+    function selectArea(area, isActive) {
+    	var data = $(area).mouseout().data('maphilight') || {};
+        data.alwaysOn = isActive;
+        $(area).data('maphilight', data).trigger('alwaysOn.maphilight');
+    }
+    $('area').click(function(e) {
+    	e.preventDefault();
+    	selectArea(e.target, true);
+    	var siblings = $(e.target).siblings('area');
+    	siblings.each(function (key) { selectArea(siblings[key], false); });
+    });
+})(jQuery);

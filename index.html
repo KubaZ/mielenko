@@ -7,7 +7,6 @@
     <title>Mielenko - ośrodek wypoczynkowy</title>
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <script src="scripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -17,11 +16,31 @@
         <nav>
             <p class="quick-call">rezerwacje: <a href="tel:+48503819391">+48 503 819 391</a></p>
             <ul>
-                <li><a href="#about" title="Inwestycja">Inwestycja</a></li>
-                <li><a href="#gallery" title="Galeria">Galeria</a></li>
-                <li><a href="#installments" title="Kredyty">Kredyty</a></li>
-                <li><a href="#location" title="Miejsce">Miejsce</a></li>
-                <li><a href="#contact" title="Kontakt">Kontakt</a></li>
+                <li>
+                    <div>
+                        <a href="#about" title="Inwestycja">Inwestycja</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#gallery" title="Galeria">Galeria</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#installments" title="Kredyty">Kredyty</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#location" title="Miejsce">Miejsce</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#contact" title="Kontakt">Kontakt</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -67,31 +86,53 @@
         <h3>Inwestycja</h3>
         <div>
             <img src="images/inwestycja.jpg" alt="">
-            <img src="images/plan.png" alt="">
+            <div class="investment-plan">
+                <img src="images/plan.png" alt="">
+                <img src="images/plan.png" alt="" usemap="#Map" class="fake">
+                <map name="Map" id="Map">
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="195,199,268,252" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="238,261,313,311" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="155,389,232,442" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="196,449,274,503" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="389,198,466,255" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="431,258,508,313" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="347,388,425,446" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="390,449,468,503" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="582,196,661,254" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="624,257,703,315" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="541,387,620,445" />
+                    <area class="apartment-area" data-lightbox-album="apartment" alt="" title="" href="#" shape="rect" coords="583,448,663,504" />
+                    <area class="front-office-area" data-lightbox-album="front-office" data-maphilight="{&quot;alwaysOn&quot;: true}" alt="" title="" href="#" shape="rect" coords="1051,262,1139,502" />
+                </map>
+            </div>
         </div>
     </section>
-    <section class="gallery" id="gallery">
+    <section class="gallery front-office-active" id="gallery">
         <h3>Galeria</h3>
-        <ul class="images-list">
-            <li>
-                <img src="images/gallery-1.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/gallery-2.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/gallery-3.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/gallery-4.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/gallery-5.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/gallery-6.jpg" alt="">
-            </li>
-        </ul>
+        <div class="frame">
+            <ul class="images-list front-office">
+                <li>
+                    <a href="images/gallery-1.jpg" data-lightbox="front-office" alt=""><img src="images/gallery-1.jpg" data-lightbox="front-office" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/gallery-2.jpg" data-lightbox="front-office" alt=""><img src="images/gallery-2.jpg" data-lightbox="front-office" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/gallery-3.jpg" data-lightbox="front-office" alt=""><img src="images/gallery-3.jpg" data-lightbox="front-office" alt=""></a>
+                </li>
+            </ul>
+            <ul class="images-list apartment">
+                <li>
+                    <a href="images/gallery-4.jpg" data-lightbox="apartment" alt=""><img src="images/gallery-4.jpg" data-lightbox="apartment" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/gallery-5.jpg" data-lightbox="apartment" alt=""><img src="images/gallery-5.jpg" data-lightbox="apartment" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/gallery-6.jpg" data-lightbox="apartment" alt=""><img src="images/gallery-6.jpg" data-lightbox="apartment" alt=""></a>
+                </li>
+            </ul>
+        </div>
     </section>
     <section class="instalments" id="installments">
         <h3>Kredyty</h3>
@@ -140,10 +181,10 @@
                         <div class="icon">
                             <img src="images/phone.png" alt="">
                         </div>
-                        <span>
+                        <div>
                             <a href="tel:585000101">58 500 01 01</a>
                             <a href="tel:585000102">58 500 01 02</a>
-                        </span>
+                        </div>
                     </div>
                 </li>
                 <li>
@@ -160,5 +201,10 @@
             </ul>
         </section>
     </footer>
+    <script src="scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/maphighlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/rwdimagemaps.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/lightbox.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

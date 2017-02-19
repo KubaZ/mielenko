@@ -573,7 +573,7 @@ section article {
 }
 
 .site-header li > div {
-  margin-bottom: 6px;
+  margin: 0 6px 6px 0;
 }
 
 .site-header nav li a:hover {
@@ -644,12 +644,6 @@ img {
   position: relative;
 }
 
-.location aside,
-.location article {
-  flex: 1;
-}
-
-
 .carousel-container {
   max-height: 768px;
   flex: 1;
@@ -704,8 +698,12 @@ img {
   top: 40px;
 }
 
+.location aside {
+  flex: 2;
+}
+
 .location article {
-  max-width: 36em;
+  flex: 1;
   padding: 0 3em;
   text-align: center;
 }
@@ -749,6 +747,12 @@ footer {
 
 footer h3 {
   margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .location .row {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 768px) {
